@@ -1,0 +1,17 @@
+.button {
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 14px 20px;
+    display: inline-flex;
+    text-transform: uppercase;
+    border: 1px solid #EC3E5A;
+    border-radius: 2px;
+    min-width: 317px;
+    &--more {
+        background: #EC3E5A url("../img/icons/arrow.svg") 95% center no-repeat;
+    }
+    &--get {
+        background: url("../img/icons/tickets.svg") 95% center no-repeat;
+    }
+}

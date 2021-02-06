@@ -1,0 +1,22 @@
+.toggle-panel {
+    border-top: 2px solid #ec3e5a;
+    display: flex;
+}
+
+.toggle-panel__btn {
+    font-size: 18px;
+    line-height: 30px;
+
+    letter-spacing: 0.01em;
+    color: black;
+    border: none;
+    padding: 10px 40px;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+    margin-top: -1px;
+    &--active {
+        background: #EC3E5A;
+        color: white;
+    }
+}

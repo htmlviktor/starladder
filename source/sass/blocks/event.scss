@@ -1,0 +1,66 @@
+.event {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid rgba(143, 154, 157, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    position: relative;
+    min-height: 360px;
+    &::before {
+        content: "";
+        display: block;
+        width: 184px;
+        height: 164px;
+        background: url("../img/logo-star.svg") no-repeat;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.event__pre-title {
+    position: relative;
+}
+
+.event__coefficient-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.event__teams {
+    margin-top: 120px;
+}
+
+.event__player-name {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    margin: 0;
+}
+
+.event__coefficient-content {
+    background: #fafafa;
+    border: 1px solid rgba(151, 151, 151, 0.1);
+    padding: 2px 7px;
+}
+
+.event__watch-live {
+    display: none;
+}
+
+.event__copy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    span {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        color: #757C84;
+    }
+}
