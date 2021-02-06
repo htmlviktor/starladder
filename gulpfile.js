@@ -103,16 +103,13 @@ gulp.task("compress", function() {
       rules: [
         {
           test: /\.(js)$/,
-          // exclude: /(node_modules)/,
+          exclude: /(node_modules)/,
           loader: 'babel-loader',
           query: {
             presets: ['@babel/preset-env']
           }
         }
       ]
-    },
-    externals: {
-      jquery: 'jQuery'
     }
   }))
     // .pipe(uglify())
