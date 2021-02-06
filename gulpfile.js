@@ -7,7 +7,7 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var csso =require ("gulp-csso");
+var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
@@ -61,8 +61,8 @@ gulp.task("refresh", function (done) {
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.jpegtran({ progressive: true }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("source/img"));
@@ -70,7 +70,7 @@ gulp.task("images", function () {
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({quality: 90}))
+    .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("source/img"));
 });
 
@@ -92,27 +92,26 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("compress", function() {
+gulp.task("compress", function () {
   return gulp.src("source/js/script.js")
-  .pipe(webpackStream({
-    output: {
-      filename: 'script.js',
-    },
-    mode: 'development',
-    module: {
-      rules: [
-        {
-          test: /\.(js)$/,
-          exclude: /(node_modules)/,
-          loader: 'babel-loader',
-          query: {
-            presets: ['@babel/preset-env']
+    .pipe(webpackStream({
+      output: {
+        filename: 'script.js',
+      },
+      mode: 'development',
+      module: {
+        rules: [
+          {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+            loader: 'babel-loader',
+            query: {
+              presets: ['@babel/preset-env']
+            }
           }
-        }
-      ]
-    }
-  }))
-    // .pipe(uglify())
+        ]
+      }
+    }))
     .pipe(gulp.dest("build/js"))
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"));
@@ -120,13 +119,13 @@ gulp.task("compress", function() {
 
 gulp.task("copy", function () {
   return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/libs/css/*.css",
-      "source/img/**",
-      "source/*.ico"
-    ], {
+    "source/fonts/**/*.{woff,woff2}",
+    "source/libs/css/*.css",
+    "source/img/**",
+    "source/*.ico"
+  ], {
     base: "source"
-    })
+  })
     .pipe(gulp.dest("build"));
 });
 
@@ -134,6 +133,6 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "compress", "sprite", "html"))
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"))
 
 gulp.task("start", gulp.series("build", "server"));
