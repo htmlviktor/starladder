@@ -1,18 +1,29 @@
 .results {
-    margin-top: 90px;
+    padding-top: 90px;
 }
 
 .results__title {
     margin: 0;
     font-size: 32px;
     line-height: 45px;
-
+    margin-bottom: 38px;
 }
 
 .results__toggle-panel {
-    margin-top: 38px;
+    margin-bottom: 60px;
 }
 
-.results__events {
-    margin-top: 60px;
+@media (max-width: $laptop-width) {
+    .results {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .results__title {
+        font-size: 22px;
+    }
+    .results {
+        padding-top: 40px;
+    }
 }

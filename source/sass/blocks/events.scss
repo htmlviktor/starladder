@@ -3,3 +3,26 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 35px;
 }
+
+
+@media (max-width: $desktop-width) {
+    .events {
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 35px;
+    }
+}
+
+
+@media (max-width: $laptop-width) {
+    .events {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 35px;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .events {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+}

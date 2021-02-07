@@ -6,6 +6,7 @@
     border-radius: 2px;
     position: relative;
     min-height: 360px;
+    display: block;
     background: #ffffff url("../img/logo-star.svg") no-repeat top right;
     &--live {
         background: #ffffff url("../img/logo-star-watch.svg") no-repeat top right;
@@ -13,9 +14,14 @@
     }
 }
 
+.event__link {
+    display: block;
+}
+
 .event__pre-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 77px;
 }
 
 .event__pre-times {
@@ -54,7 +60,7 @@
 .event__coefficient-wrapper {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     margin-top: 9px;
 }
@@ -120,4 +126,8 @@
         right: 0;
         top: -40px;
     }
+}
+
+@media (max-width: $tablet-width) {
+    
 }

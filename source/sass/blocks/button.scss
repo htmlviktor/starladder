@@ -13,11 +13,16 @@
     border: 1px solid #ec3e5a;
     border-radius: 2px;
     min-width: 317px;
-    margin-right: 35px;
     &--more {
         background: #ec3e5a url("../img/icons/arrow.svg") 95% center no-repeat;
     }
     &--get {
         background: url("../img/icons/tickets.svg") 95% center no-repeat;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .button {
+        min-width: 100%;
     }
 }
