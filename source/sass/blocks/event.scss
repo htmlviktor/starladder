@@ -54,13 +54,17 @@
 .event__coefficient-wrapper {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 9px;
 }
 
 .event__teams {
-    margin-top: 120px;
+    margin-top: 80px;
+}
+
+.event__team-link {
+    margin-right: 12px;
 }
 
 .event__player-name {
@@ -74,12 +78,20 @@
     background: #fafafa;
     border: 1px solid rgba(151, 151, 151, 0.1);
     padding: 2px 7px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #282830;
 }
 
 .event__copy {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    align-items: center;
     span {
         font-weight: normal;
         font-size: 14px;

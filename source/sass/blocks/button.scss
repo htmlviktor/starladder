@@ -1,15 +1,21 @@
 .button {
     color: white;
+    font-weight: bold;
     font-size: 14px;
     line-height: 20px;
-    padding: 14px 20px;
-    display: inline-flex;
+
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    border: 1px solid #EC3E5A;
+
+    color: #ffffff;
+    padding: 19px 22px;
+    display: inline-flex;
+    border: 1px solid #ec3e5a;
     border-radius: 2px;
     min-width: 317px;
+    margin-right: 35px;
     &--more {
-        background: #EC3E5A url("../img/icons/arrow.svg") 95% center no-repeat;
+        background: #ec3e5a url("../img/icons/arrow.svg") 95% center no-repeat;
     }
     &--get {
         background: url("../img/icons/tickets.svg") 95% center no-repeat;
