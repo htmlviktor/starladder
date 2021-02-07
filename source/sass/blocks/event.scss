@@ -1,26 +1,54 @@
 .event {
     padding: 25px;
-    background: #ffffff;
     border: 1px solid rgba(143, 154, 157, 0.2);
     box-sizing: border-box;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     position: relative;
     min-height: 360px;
-    &::before {
-        content: "";
-        display: block;
-        width: 184px;
-        height: 164px;
-        background: url("../img/logo-star.svg") no-repeat;
-        position: absolute;
-        right: 0;
-        top: 0;
+    background: #ffffff url("../img/logo-star.svg") no-repeat top right;
+    &--live {
+        background: #ffffff url("../img/logo-star-watch.svg") no-repeat top right;
+        border: 1px solid #ff5e5e;
     }
 }
 
+.event__pre-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event__pre-times {
+    margin: 0;
+}
+
+.event__time {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    color: #282830;
+}
+
+.event__date {
+    font-size: 14px;
+    line-height: 20px;
+
+    letter-spacing: 0.01em;
+    color: #757c84;
+}
+
+.event__pre-times {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .event__pre-title {
-    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    color: #757c84;
+
+    letter-spacing: 0.01em;
 }
 
 .event__coefficient-wrapper {
@@ -48,10 +76,6 @@
     padding: 2px 7px;
 }
 
-.event__watch-live {
-    display: none;
-}
-
 .event__copy {
     display: flex;
     justify-content: space-between;
@@ -61,6 +85,27 @@
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.01em;
-        color: #757C84;
+        color: #757c84;
+    }
+}
+
+.event__watch-live {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 38px;
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        background: url("../img/icons/play-video.svg");
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 0;
+        top: -40px;
     }
 }

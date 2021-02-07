@@ -1,0 +1,74 @@
+.team__registered {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+
+    letter-spacing: 0.01em;
+
+    color: #282830;
+}
+
+.team__head {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #757c84;
+    display: flex;
+    span {
+        padding: 15px 36px 15px 25px;
+    }
+}
+
+.team__list {
+    @include reset-list;
+}
+
+.team__item {
+    &:nth-child(odd) {
+        background: #ffffff;
+    }
+}
+
+.team__link {
+    display: block;
+    display: flex;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    span {
+        padding: 15px 36px 15px 25px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.01em;
+        color: #282830;
+    }
+    &:hover {
+        border: 1px solid #20a95a;
+    }
+}
+
+
+
+.team__player-name {
+    margin-left: 34px;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -10px;
+    }
+
+    &--ua {
+        &::before {
+            background: url("../img/flags/ua.svg");
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.more-links__item {
+    display: block;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #757c84;
+    border-bottom: 1px solid rgba(54, 56, 65, 0.1);
+    position: relative;
+    &:first-child {
+        border-top: 1px solid rgba(54, 56, 65, 0.1);
+    }
+
+    &::before {
+        content: "";
+        width: 10px;
+        height: 16px;
+        position: absolute;
+        display: block;
+        background: url("../img/icons/mini-arrow.svg");
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+    }
+}
