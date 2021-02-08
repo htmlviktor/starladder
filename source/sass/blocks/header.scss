@@ -94,6 +94,10 @@
     align-self: end;
 }
 
+.header__line-wrapper {
+    padding: 0 50px;
+}
+
 @media (max-width: $desktop-width) {
     .header__info {
         padding: 125px 10px 125px;
